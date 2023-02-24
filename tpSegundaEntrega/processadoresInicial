@@ -1,0 +1,28 @@
+import tkinter as tk
+
+def processadores_window():
+    # Criando nova janela
+    processadores = tk.Toplevel(root)
+    processadores.title("Processadores")
+
+    # Adicionando título e ícone na janela
+    tk.Label(processadores, text="Processadores").pack()
+
+    # Adicionando botões
+    tk.Button(processadores, text="Adicionar").pack()
+    tk.Button(processadores, text="Remover").pack()
+    tk.Button(processadores, text="Voltar", command=processadores.destroy).pack()
+
+# Criando a janela principal (Menu)
+root = tk.Tk()
+root.title("Menu")
+
+# Adicionando título e ícone na janela
+tk.Label(root, text="Menu").pack()
+
+# Adicionando botões
+tk.Button(root, text="Processadores", command=processadores_window).pack()
+tk.Button(root, text="Alterar preço").pack()
+tk.Button(root, text="Estoque").pack()
+
+root.mainloop()
